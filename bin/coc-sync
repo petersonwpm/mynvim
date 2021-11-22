@@ -1,0 +1,29 @@
+#!/usr/bin/bash
+
+# thanks -> https://www.chrisatmachine.com/Neovim/04-vim-coc/
+
+set -o nounset    # error when referencing undefined variable
+set -o errexit    # exit when command fails
+
+# Install extensions
+mkdir -p ~/.config/coc/extensions
+cd ~/.config/coc/extensions
+if [ ! -f package.json ]
+then
+  echo '{"dependencies":{}}'> package.json
+fi
+# Change extension names to the extensions you need
+npm install \
+	coc-snippets \
+	coc-tsserver \
+	coc-html \
+	coc-css \
+	coc-json \
+	coc-yaml \
+	coc-prettier \
+	@yaegassy/coc-intelephense \
+	--global-style \
+	--ignore-scripts \
+	--no-bin-links \
+	--no-package-lock \
+	--only=prod
