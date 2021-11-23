@@ -50,10 +50,10 @@ function! s:check_back_space() abort
 endfunction
 
 
-" Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>e <Cmd>CocCommand explorer<CR>
+
+nmap <leader>rn <Plug>(coc-rename) "Symbol renaming.
+xmap <leader>f  <Plug>(coc-format-selected) "Formatting selected code.
 nmap <leader>f  <Plug>(coc-format-selected)
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
